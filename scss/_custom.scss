@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
+
+   $text_color : #fff;
+   $poppins : 'Poppins', sans-serif;
+   $lato : 'Lato', sans-serif;
+   $slab : 'Roboto Slab', serif;
+
+   @mixin fullwidthheight{
+    width: 100vw;
+    height: 100vh;
+   } 
+
+   @mixin h4style {
+    font-family: $lato;
+    font-weight: 800;
+    font-size: 32px; 
+   }
+
+   body{
+    overflow-x: hidden;
+   }
+
+// SECTION HOME
+  #home{
+    background-image: url(../images/bkg-hero-header.jpg) !important;
+    background-size: cover;
+    filter: grayscale(15%);
+    @include fullwidthheight;
+
+    a{
+        text-decoration: none;
+        color: $text_color !important;
+        font-family: $lato !important;
+        font-size: larger !important;
+        font-weight: bolder !important;
+
+        &:hover{
+            transform: scale(1.1);
+            transition: 0.4s ease;
+        }
+
+        &:not(:hover) {
+            transform: scale(1.0);
+            transition: 0.4s ease;
+        }
+    }
+
+    #text{
+        visibility: hidden;
+    }
+
+    .items{
+        width: 100vw;
+        height: 44vh;
+
+        h1{
+            font-family: $lato;
+            font-size: 96px;
+            font-weight:900;
+            color: #fff;
+            cursor: default;
+
+            span{
+                font-family: $slab;
+                color: #ffb81c;
+                font-size: 96px;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    h6{
+        font-family: $poppins;
+        font-size: 18px;
+        color: #fff;
+        cursor: default;
+    }
+
+    .btn-opac{
+        background: transparent;
+        backdrop-filter: brightness(80%);
+        border: 3px solid #fff;
+        width: 15vw;
+        height: 8vh;
+        font-family: $lato;
+        font-weight: 800;
+
+        &:hover {
+            backdrop-filter: brightness(99%);
+            transition: 0.3s ease;
+        }
+
+        &:not(:hover) {
+            backdrop-filter: brightness(80%);
+            transition: 0.3s ease;
+        }
+    }
+
+    .btn-yellow{
+        background: #ffb81c;
+        width: 15vw;
+        height: 8vh;
+        font-family: $lato;
+        font-weight: 800;
+
+        &:hover {
+            background: #fdce65;
+            transition: 0.3s ease;
+        }
+
+        &:not(:hover) {
+            background: #ffb81c;
+            transition: 0.3s ease;
+        }
+    }
+  }
+
+
+// SECTION ABOUT
+  #about{
+    background-color: #fff;
+    width: 100vw;
+    height: 55vh;
+
+    h2{
+        font-family: $lato;
+        font-weight: 900;
+        font-size: 45px;
+    }
+
+    p{
+        font-family: $lato;
+        font-weight: 400;
+        font-size: 22px;
+    }
+  }
+
+
+// SECTION PROJECTS
+  #projects{
+
+    h2{
+        font-family: $lato;
+        font-weight: 900;
+        font-size: 45px;
+    }
+
+    p{
+        font-family: $lato;
+        font-weight: 400;
+        font-size: 22px;
+    }
+
+    .images{
+        position: relative;
+    }
+
+    .arrow{
+        visibility: hidden;
+    }
+
+    .leftarrow{
+        position: relative;
+        top: 33vh;
+        right: 46vw;
+        z-index: 13;
+
+        &:hover{
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+
+        &:not(:hover) {
+            transform: scale(1.0);
+            transition: 0.3s ease;
+        }
+    }
+
+    .rightarrow{
+        position: relative;
+        top: 33vh;
+        left: 46vw;
+        z-index: 10;
+
+        &:hover{
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+
+        &:not(:hover) {
+            transform: scale(1.0);
+            transition: 0.3s ease;
+        }
+    }
+  }
+
+
+// SECTION TESTIMONIALS
+#testimonials{
+    background-image: url(../images/bkg-testimonial.jpg) !important;
+    background-size: cover;
+    filter: grayscale(15%);
+    width: auto;
+    height: auto;
+    overflow: hidden;
+
+    h2{
+        font-family: $lato;
+        font-weight: 900;
+        font-size: 45px;
+    }
+
+    p{
+        font-family: $lato;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .avatar{
+        border-radius: 50%;
+    }
+
+    .quote{
+        background-color: #6a4d8a;
+        width: 60vw;
+        height: 20vh;
+    }
+
+    .sharp {
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 20px;
+        border-style: solid;
+        border-color: #6a4d8a transparent transparent transparent;
+        color: #6a4d8a;
+    }
+
+    h6{
+        font-family: $lato;
+        font-weight: 800;
+        font-size: 32px;
+    }
+
+    .dot-active{
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
+
+    .dot{
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+}
+
+#services{
+    width: auto;
+    height: 85vh;
+    overflow: hidden;
+
+    h2{
+        font-family: $lato;
+        font-weight: 900;
+        font-size: 45px; 
+    }
+
+    p{
+        font-family: $lato;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .text-orange{
+        color: #f18b6d;
+        @include h4style;
+    }
+
+    .text-yellow{
+        color: #ffb83c;
+        @include h4style;
+    }
+
+    .text-purple{
+        color: #6a4d8a;
+        @include h4style;
+    }
+
+    .webdesign{
+        width: 30%;
+    }
+}
+
+#news{
+    background-color: #222f36;
+    width: auto;
+    height: 104vh;
+    overflow: hidden; 
+    padding: 0;
+    margin: 0;
+
+    h2{
+        font-family: $lato;
+        font-weight: 900;
+        font-size: 45px; 
+    }
+
+    p{
+        font-family: $lato;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .btn-yellow{
+        background: #ffb81c;
+        width: 12vw;
+        height: 6vh;
+        font-family: $lato;
+        font-weight: 800;
+
+        &:hover {
+            background: #fdce65;
+            transition: 0.3s ease;
+        }
+
+        &:not(:hover) {
+            background: #ffb81c;
+            transition: 0.3s ease;
+        }
+    }
+
+    h5{
+        font-family: $lato;
+        font-weight: 800;
+        font-size: 23px;
+    }
+
+    .link{
+        font-family: $lato;
+        font-weight: 600;
+        text-decoration: none;
+        color: #ffb81c;
+        font-size: large;
+
+        &:hover{
+            text-decoration: underline;
+            color: #ffb81c;
+        }
+    }
+
+    .card{
+        width: 29%;
+
+        &:hover{
+            transform: translateY(20px);
+            transition: 0.4s ease;
+        }
+
+        &:not(:hover){
+            transform: translateY(0px);
+            transition: 0.4s ease;
+        }
+    }
+
+}
+
+#team{
+    background-image: url(../images/bkg-counter.jpg) !important;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    height: 20vh;
+
+    h1{
+        font-family: $poppins;
+        font-weight: 800;
+        font-size: 48px;  
+    }
+
+    h6{
+        font-family: $poppins;
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+    #firstcol{
+        border-right: 1px solid #fff;
+    }
+
+    #secondcol{
+        border-right: 1px solid #fff;
+    }
+}
+
+#contact{
+    height: 90vh;
+    overflow: hidden;
+
+    h2{
+        font-family: $lato;
+        font-weight: 900;
+        font-size: 45px; 
+    }
+
+    p{
+        font-family: $lato;
+        font-weight: 400;
+        font-size: 20px;
+        color: #ffb81c;
+    }
+
+    span{
+        font-family: $lato;
+        font-weight: 500;
+        font-size: 17px;
+    }
+
+    .media{
+        cursor: pointer;
+    }
+
+    #address{
+       border-right: 1px solid #d1d1d1;
+       height: 7vh;
+       
+    }
+
+    #support{
+        border-right: 1px solid #d1d1d1;
+        height: 7vh;
+    }
+
+    #input{
+        width: 30%;
+
+        input{
+            height: 4.3vh;
+            border: 1px solid #d1d1d1;
+        }
+
+        label{
+            font-family: $lato;
+            font-weight: 500;
+            font-size: 17px;  
+        }
+    }
+
+    #placeholder{
+        height: 25vh;
+        border: 1px solid #d1d1d1;
+    }
+
+    .bg-input{
+        background-color: #fcfcfc;
+    }
+}
+
+#info{
+    background-color: #3e3e3b;
+    height: 35vh;
+    width: auto;
+    overflow: hidden;
+
+    h5{
+        font-family: $lato;
+        font-weight: 800;
+        font-size: 25px;  
+    }
+
+    p{
+        font-family: $lato;
+        font-weight: 500;
+        font-size: 17px; 
+        padding-top: 2px;
+        color: #a0a4b4;
+    }
+
+    .links{
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.02);
+            transition: 0.2s ease;
+        }
+
+        &:not(:hover){
+            transform: scale(1.0);
+            transition: 0.2s ease;
+        }
+    }
+
+    #scroll{
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+}
+
+footer{
+    background-color: #3a3936;
+    height: 10vh;
+
+    .theme{
+        color: #a0a4b4;
+    }
+}
